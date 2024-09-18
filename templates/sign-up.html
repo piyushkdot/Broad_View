@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    form {
+      width: 300px;
+      margin: 20px auto;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 2px solid black;
+    }
+    h2{
+      text-align: center;
+    }
+    input[type="email"], input[type="password"]{
+      width: 90%;
+      padding-top: 10px;
+      padding-right: 10px;
+      margin-top:15px;
+    }
+    button{
+      width: 50%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-top: 10px;
+      margin-right: auto;
+      margin-left: 75px;
+      margin-bottom: auto;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #E0B0FF;
+    }
+  </style>
+</head>
+<body>
+<h2>Sign Up</h2>
+  <form method='POST'>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    <br>
+    <button type="submit">Sign Up</button>
+  </form>
+</body>
+</html>

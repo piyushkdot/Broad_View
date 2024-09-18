@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Home of Broad View">
+        <meta name="keywords" content="Broad, View, Broad View, broad view">
+        <meta name="author" content="Piyush Yadav">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="static\style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="left-nav">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="middle-nav">
+                <span class="brand-name">Broad View</span>
+            </div>
+          <div class="right-nav">
+                <div class="burger-menu" onclick="toggleMenu()">&#9776; </div>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a href="/create_account" target="_blank">Create Account</a>
+                    <a href="/profile">Profile</a>
+                    <a href="/about">About</a>  
+                    <a href="/books">Books</a>
+                </div>
+            </div>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        </nav>
+
+        <div class="blogs">
+        {% if blogs %}
+        {% for blog in blogs %}
+        <div class="blog-card">
+            <span class="title"><h2>{{ blog.title }}</h2></span>
+            <div class="info">
+                <h5 class="writer">{{ blog.author }}</h5>
+                <h5 class="date">{{ blog.publishedAt }}</h5>
+            </div>
+            <div class="main-content">
+                <p>{{ blog.description }}</p>
+            </div>
+            {% if blog.url %}
+            <a href="{{ blog.url }}" target="_blank">Read More</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No Blogs Available. Server's Problem. Will Restore Quickly.</p>
+        {% endif %}
+        <br>
+    </div>
+
+    {% block content %}{% endblock %}
+  </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('dropdown-menu');
+                if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+                } else {
+                menu.style.display = 'block';
+                }
+            }
+
+        </script>
+    </body>
+</html>

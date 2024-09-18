@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Home of Broad View">
+        <meta name="keywords" content="Broad, View, Broad View, broad view">
+        <meta name="author" content="Piyush Yadav">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <style>
+            body{
+                background-color:#80ffbf;
+            }
+            .info{
+                margin-top:40px;
+                text-align: center;
+                font-size: 30px;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                margin-left:698px;
+            }
+            button{
+                width: 100px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            button:hover{
+                color:#ffa64d;
+            }
+            .write-icon{
+                text-decoration: none;
+                font-size: 35px;
+                margin-left:730px;
+            }
+            .write-icon:hover{
+                color:#ffa64d;
+            }
+            h2{
+                text-align:center;
+            }
+
+            .blogs{
+                width: 600px;
+                margin: auto;
+                background: #ffff80;
+                border-radius: 8px;
+                display: inline-block;
+            }
+
+            .blog-card{
+                border: 2px solid #333;
+                box-shadow: 0 4px 6px rgb(0, 0, 0.1);
+                margin-top: 10px;
+                margin-left: 25px;
+                margin-right: 25px;
+                padding-left: 20px ;
+                padding-right: auto;
+                width: 1000px;
+            }
+            .blog-actions{
+                display:flex;
+                align-items:center;
+                padding-bottom:30px;
+            }
+        </style>
+    </head>
+    <body>
+    <p class="info">You Are Looged In with {{ User.email }}</p>
+    <br>
+    <a href="/write-blog" class="write-icon"><i class="fa-solid fa-pen"></i></a>
+    <br>
+    <br>
+    <br>
+    <a href="/logout"><button>Logout</button></a>
+    <br>
+    <h2>Your Blogs</h2>
+    <br>
+    {% for blog in user_blogs %}
+    <div class="blog-card">
+        <h3>{{ blog.title }}</h3>
+        <p>{{ blog.description }}</p>
+        <p>Published on: {{ blog.pub_date.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+        <div class="blog-actions">
+            <a href="{{ url_for('edit_blog', blog_id=blog.id) }}"><button>Edit</button></a>
+            <form action="{{ url_for('delete_blog', blog_id=blog.id) }}" method="post" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+    </body>
+</html>

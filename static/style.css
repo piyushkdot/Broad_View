@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffff80;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+}
+
+.left-nav input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.middle-nav .brand-name {
+    font-size: 24px;
+    font-family: 'Broad View', sans-serif; /* Make sure to include this font or substitute it */
+}
+
+.right-nav {
+    position: relative;
+}
+
+.burger-menu {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #333;
+    border: 3px solid #444;
+    border-radius: 3px;
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #444;
+}
+
+@media (max-width: 768px) {
+    .left-nav, .middle-nav, .right-nav {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+.blog-card{
+    border: 2px solid #333;
+    box-shadow: 0 4px 6px rgb(0, 0, 0.1);
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-left: 20px ;
+    padding-right: auto;
+    width: 750px;
+}
+
+.info{
+    display: flex;
+    align-content: space-between;
+}
+
+.date{
+    padding-left: 100px;
+}
+
+.blogs{
+    width: 700px;
+    margin: auto;
+    background: #ffff80;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+table{
+    margin-top: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 40%
+}
+
+th{
+    border: 2px solid black;
+}
+
+tr:hover{
+    background-color: violet;
+}
+
+.user_blogs{
+
+}

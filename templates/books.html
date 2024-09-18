@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Home of Broad View">
+        <meta name="keywords" content="Broad, View, Broad View, broad view">
+        <meta name="author" content="Piyush Yadav">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Books Recommendation From Author</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .book-rec-odd{
+                width: 1200px;
+                margin-left: 80px;
+                display: flex;
+                align-items: center;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+                background-color: #ccff66;
+                animation: slide-in 2.5s forwards;
+            }
+            img{
+                width: 75%;
+            }
+            .book-info{
+                padding-right: 70px;
+            }
+            a{
+                text-decoration: none;
+                font-size: 25px;
+                color: black;
+            }
+
+            @keyframes slide-in{
+                from{
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to{
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes opp-slidein{
+                from{
+                    transform: translateX(-100%);
+                    opacity: 0;
+                }
+                to{
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            .book-rec-even{
+                width: 1200px;
+                margin-left: 80px;
+                display: flex;
+                align-items: center;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+                background-color: #ccff66;
+                animation: opp-slidein 2.5s forwards;
+            }
+        </style>
+    </head>
+    <body>
+    <h2 style="text-align:center;">A Small Book Recommendation By Author</h2>
+        <div class="book-rec-odd">
+            <div class="book-img">
+                <img src="static/bookg.jpg" alt="Goodan-by-Premchand">
+            </div>
+            <div class="book-info">
+                <h2 class="title">Godaan By Premchand</h2>
+                <br>
+                <h3 class="description">This Book Is A Masterpiece in terms of Capturing the Essence of True Rural India. A Must Read.</h3>
+                <br>
+                <a href="https://www.amazon.in/Godaan-Hindi-Munshi-Premchand/dp/9388810473">Buy From Here : <i class="fa fa-amazon"></i></a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="book-rec-even">
+            <div class="book-img">
+                <img src="static/book1.jpg" alt="Heaven by Mieko Kawakami" style="width:80%;">
+            </div>
+            <div class="book-info">
+                <h2 class="title">Heaven By Mieko Kawakami</h2>
+                <br>
+                <h3 class="description">"Heaven" by Mieko Kawakami is a poignant novel about two bullied teenagers who form a deep, emotional bond, exploring themes of friendship, suffering, and the struggle for meaning amidst cruelty, highlighting human resilience and the search for connection.</h3>
+                <br>
+                <a href="https://www.amazon.in/Heaven-Mieko-Kawakami/dp/1509898255/ref=sr_1_3?s=books&sr=1-3">Buy From Here : <i class="fa fa-amazon"></i></a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="book-rec-odd">
+            <div class="book-img">
+                <img src="static/book2.jpg" alt="Out By Natsuo Kirino">
+            </div>
+            <div class="book-info">
+                <h2 class="title">Out By Natsuo Kirino</h2>
+                <br>
+                <h3 class="description">"Out" by Natsuo Kirino is a gripping thriller about four women factory workers in Tokyo who become entangled in crime and violence after covering up a murder, delving into themes of desperation, survival, and the dark side of human nature.</h3>
+                <br>
+                <a href="https://www.amazon.com/Out-Natsuo-Kirino/dp/0099472287">Buy From Here : <i class="fa fa-amazon"></i></a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="book-rec-even">
+            <div class="book-img">
+                <img src="static/book3.jpg" alt="Before The Coffee Gets Cold" style="width:80%;">
+            </div>
+            <div class="book-info">
+                <h2 class="title">Before The Coffee Gets Cold by Toshikazu Kawaguchi</h2>
+                <br>
+                <h3 class="description">"Before the Coffee Gets Cold" by Toshikazu Kawaguchi is a heartwarming tale set in a Tokyo café where customers can travel back in time, exploring themes of love, regret, and hope as they seize the chance to change moments from their past.</h3>
+                <br>
+                <a href="https://www.amazon.com/Before-Coffee-Gets-Cold-Novel/dp/1335430997">Buy From Here : <i class="fa fa-amazon"></i></a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="book-rec-odd">
+            <div class="book-img">
+                <img src="static/book4.jpg" alt="Silent Patient By Alex Michaelides" style="width:120%;">
+            </div>
+            <div class="book-info">
+                <h2 class="title" style="padding-left:50px;">The Silent Patient by Alex Michaelides</h2>
+                <br>
+                <h3 class="description" style="padding-left:50px;">"The Silent Patient" by Alex Michaelides is a psychological thriller about a famous painter who stops speaking after allegedly murdering her husband, and the psychotherapist determined to uncover the truth behind her silence.
+                </h3>
+                <br>
+                <a href="https://www.amazon.com/Silent-Patient-Alex-Michaelides/dp/1250301696" style="padding-left:50px;">Buy From Here : <i class="fa fa-amazon"></i></a>
+            </div>
+        </div>
+    <br>
+    <br>
+        <div class="book-rec-even">
+            <div class="book-img">
+                <img src="static/book5.jpg" alt="Then She Was Gone" style="width:175%;">
+            </div>
+            <div class="book-info">
+                <h2 class="title" style="padding-left:100px;">Then She Was Gone By Lisa Jwell</h2>
+                <br>
+                <h3 class="description" style="padding-left:100px;">"Then She Was Gone" by Lisa Jewell is a gripping mystery about a mother who, ten years after her teenage daughter’s disappearance, begins to uncover shocking truths when she meets a young girl eerily resembling her missing child.</h3>
+                <br>
+                <a href="https://www.amazon.com/Then-She-Was-Gone-Novel/dp/1501154656/ref=sr_1_1?s=books&sr=1-1" style="padding-left:100px;">Buy From Here : <i class="fa fa-amazon"></i></a>
+            </div>
+        </div>
+    </body>
+</html>

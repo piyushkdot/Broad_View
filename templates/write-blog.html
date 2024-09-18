@@ -1,0 +1,95 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="description" content="Home of Broad View">
+            <meta name="keywords" content="Broad, View, Broad View, broad view">
+            <meta name="author" content="Piyush Yadav">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Write Blog</title>
+
+        <style>
+            table{
+                width:60%;
+                border-collapse: collapse;
+                margin-left:auto;
+                margin-right:auto;
+            }
+
+             th, td {
+                padding: 10px;
+                text-align: center;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+
+            td {
+                background-color: #f9f9f9;
+            }
+
+             input[type="text"], textarea {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                line-height: 4.2;
+            }
+
+            textarea {
+                resize: none;
+                overflow: hidden;
+            }
+            h1{
+                text-align:center;
+                font-family:"Edu AU VIC WA NT Hand", sans-serif;
+            }
+
+        </style>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <h1>Write Your Blog</h1>
+            <form action="{{ url_for('writing_blog')}}" method="POST">
+                <table>
+                    <tr>
+                        <th>Title</th>
+                        <td>
+                            <textarea id="blog_title" name="blog_title" rows="1" required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>
+                            <textarea id="main_content" name="main_content" rows="1" required></textarea>
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td colspan="2" style="text-align:center;">
+                        <button type="submit" value="submit">SUBMIT</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        <script>
+            function autoResize(textarea) {
+                textarea.style.height = "auto";
+                textarea.style.height = textarea.scrollHeight + "px";
+            }
+
+            document.getElementById('blog-title').addEventListener('input', function() {
+                autoResize(this);
+             });
+
+            document.getElementById('main-content').addEventListener('input', function() {
+                autoResize(this);
+            });
+        </script>
+        </body>
+    </html>
